@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitbook
+  namespace: gitbook
+  labels:
+    app: gitbook
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitbook
+  template:
+    metadata:
+      labels:
+        app: gitbook
+    spec:
+      containers:
+        - name: gitbook
+          image: montkim9/gitbook:0.0.1
+          ports:
+            - containerPort: 4000
+          # args: ["serve"]

@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gitbook-ingress
+  namespace: gitbook
+  annotations:
+    # kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: mont-prod
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - study.montkim.com
+      secretName: gitbook-tls
+  rules:
+    - host: study.montkim.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gitbook-service
+                port:
+                  number: 80
