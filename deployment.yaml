@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: gitbook
-          image: montkim9/my-gitbook:ccb46c
+          image: montkim9/my-gitbook:f78860
           ports:
             - containerPort: 4000
           # args: ["serve"]
