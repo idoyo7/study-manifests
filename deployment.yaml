@@ -6,7 +6,8 @@ metadata:
   labels:
     app: gitbook
 spec:
-  replicas: 1
+  replicas: 2
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: gitbook
