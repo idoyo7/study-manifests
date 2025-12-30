@@ -1,0 +1,24 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: gitbook-virtualservice
+  namespace: gitbook
+spec:
+  hosts:
+  - study.montkim.com
+  gateways:
+  - istio-system/montkim-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: gitbook-service
+        port:
+          number: 80
+    timeout: 30s
+    retries:
+      attempts: 3
+      perTryTimeout: 10s
+

@@ -21,4 +21,4 @@ spec:
           image: art.montkim.com/study/my-gitbook:df9253
           ports:
             - containerPort: 3000
-          # args: ["serve"]
+
