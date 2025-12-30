@@ -6,8 +6,10 @@ metadata:
 spec:
   hosts:
   - study.montkim.com
+  - study.makgol.com  # 또는 makgol.com (실제 도메인에 맞게 수정)
   gateways:
   - istio-system/montkim-gateway
+  - istio-system/makgol-gateway
   http:
   - match:
     - uri:
