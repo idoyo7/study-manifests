@@ -5,9 +5,9 @@ metadata:
   namespace: gitbook
 spec:
   hosts:
-  - study.montkim.com
+  - study.makgol.com
   gateways:
-  - istio-system/montkim-gateway
+  - istio-system/makgol-gateway
   http:
   - match:
     - uri:
