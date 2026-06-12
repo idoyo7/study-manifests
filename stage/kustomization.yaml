@@ -4,6 +4,7 @@ resources:
   - deployment.yaml
   - service.yaml
   - virtualservice.yaml
+  - monitor.yaml
 images:
   - name: montkim9/my-gitbook
     newTag: f031f8

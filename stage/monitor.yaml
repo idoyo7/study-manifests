@@ -1,0 +1,12 @@
+apiVersion: autokuma.bigboot.dev/v1
+kind: KumaEntity
+metadata:
+  name: study-stage
+  namespace: gitbook
+spec:
+  config:
+    type: http
+    name: study gitbook (stage)
+    url: https://study.makgol.com
+    interval: 60
+    max_retries: 3
